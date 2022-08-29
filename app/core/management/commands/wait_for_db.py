@@ -6,6 +6,7 @@ from django.core.management.base import BaseCommand
 
 import time
 
+
 class Command(BaseCommand):
     def handle(self, *args, **options):
         self.stdout.write("wait for db ..")
@@ -20,3 +21,4 @@ class Command(BaseCommand):
                 time.sleep(1)
 
         self.stdout.write(self.style.SUCCESS('DB CONNECTED'))
+        
